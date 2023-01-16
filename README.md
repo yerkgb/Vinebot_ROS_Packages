@@ -19,7 +19,9 @@ rosdep install --from-paths src --ignore-src -r -y
 # Compile package
 catkin_make
 ```
+
 This package is binding the USD devices under static name, so you can install the udev rule to identify the device as given in launch files. In order to do so edit /etc/udev/rules.d/10-local.rules file under root user:
+```bash
 $sudo su root 
 $nano /etc/udev/rules.d/99-usb-serial.rules
 #add the following line inside the file 
@@ -27,7 +29,7 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="23f3", SYMLINK+="r
 SUBSYSTEM=="tty", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="imu"
 #restart the system 
 $sudo udevadm control --reload-rules && udevadm trigger
-
+```
 
 Troubleshooting: 
 1. If you do not have the permission to open the serial port:
