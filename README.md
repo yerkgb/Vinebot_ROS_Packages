@@ -32,8 +32,7 @@ $sudo udevadm control --reload-rules && udevadm trigger
 ```
 
 Troubleshooting: 
-1. If you do not have the permission to open the serial port:
-try to read this article https://websistent.com/fix-serial-port-permission-denied-errors-linux/
+1. If you do not have the permission to open the serial port, try to read this article https://websistent.com/fix-serial-port-permission-denied-errors-linux/
 
 Don't forget to add in your bash your catkin sources
 
