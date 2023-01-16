@@ -45,7 +45,7 @@ source ~/.bashrc
 # Run
 
 ```bash
-roslaunch roboteq_control vinebot.launch
+roslaunch roboteq_control bringup.launch
 ```
 
 
