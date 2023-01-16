@@ -27,7 +27,7 @@ $nano /etc/udev/rules.d/99-usb-serial.rules
 #add the following line inside the file 
 SUBSYSTEM=="tty", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="23f3", SYMLINK+="roboteq"
 SUBSYSTEM=="tty", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK+="imu"
-#restart the system 
+#now reload the rules files using the following code 
 $sudo udevadm control --reload-rules && udevadm trigger
 ```
 
