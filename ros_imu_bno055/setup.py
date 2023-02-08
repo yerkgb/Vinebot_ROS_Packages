@@ -1,4 +1,6 @@
-from distutils.core import setup
+#from distutils.core import setup
+#for noetic support use setup tools instead of distutils
+from setuptools import setup
 from catkin_pkg.python_setup import generate_distutils_setup
 
 # fetch values from package.xml
